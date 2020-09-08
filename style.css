@@ -1,0 +1,240 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Baloo+2&family=Petit+Formal+Script&family=Raleway&family=Varela+Round&display=swap');
+
+:root {
+    --font-cursive: 'Petit Formal Script', cursive;
+    --font-paragraph1: 'Raleway', sans-serif;
+    --font-paragraph2: 'Baloo 2', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    --color1: #26dbff;
+    --color2: #9e05fc;
+    --color3: #ffd105;
+    --gradient1: linear-gradient(137deg, rgba(191, 124, 232, 1) 17%, rgba(64, 223, 255, 1) 81%);
+}
+
+.font-cursive {
+    font-family: var(--font-cursive);
+}
+
+.font-paragraph1 {
+    font-family: var(--font-paragraph1);
+}
+
+.font-paragraph2 {
+    font-family: var(--font-paragraph2);
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.bg-gradient1 {
+    background: var(--gradient1);
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+button,
+button:focus {
+    outline: none !important;
+}
+
+/* navbar */
+.menu-icon i {
+    font-size: 25px;
+}
+
+.menu-icon .fa-times {
+    display: none;
+}
+
+.menu-icon.active .fa-times {
+    display: block;
+}
+
+.menu-icon.active .fa-bars {
+    display: none;
+}
+
+/* display */
+.display-container {
+    background: url(images/wave.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+.logo i {
+    transform: rotate(-25deg);
+}
+
+.nav-link {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    color: #fff;
+    transition: 0.5s ease;
+}
+
+.display-content h1 {
+    font-size: 50px;
+    border: 5px solid #000;
+    animation: shadow 1s linear infinite alternate;
+}
+
+@keyframes shadow {
+    from {
+        text-shadow: none;
+        box-shadow: none;
+    }
+
+    to {
+        text-shadow: 0 0 30px rgba(247, 4, 247, 1);
+        box-shadow: 0 0 30px rgba(247, 4, 247, 1);
+    }
+}
+
+#html {
+    animation: html 1s linear infinite alternate;
+}
+
+#css {
+    animation: css 1s linear infinite alternate;
+}
+
+#code {
+    animation: code 1s linear infinite alternate;
+}
+
+@keyframes html {
+    from {
+        transform: translateX(10px);
+    }
+
+    to {
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes css {
+    from {
+        transform: translateX(-10px);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes code {
+    from {
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform: translateY(10px);
+    }
+}
+
+.display-container .wave {
+    margin-bottom: -2px;
+}
+
+@media(max-width:445px) {
+    .display-content h1 {
+        font-size: 35px;
+    }
+}
+
+/* about area */
+.img-about,
+.about-text {
+    opacity: 0;
+}
+
+.img-about.animate__animated,
+.about-text.animate__animated {
+    opacity: 1;
+}
+
+/* skills area */
+#skills-area {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/skills-area.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.img-skills {
+    width: 40px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 0;
+    transition: width 2.5s ease-out;
+}
+
+.skill-html .animation {
+    width: 80%;
+}
+
+.skill-css .animation {
+    width: 75%;
+}
+
+.skill-js .animation {
+    width: 40%;
+}
+
+.skill-bootstrap .animation {
+    width: 85%;
+}
+
+.skill-php .animation {
+    width: 60%;
+}
+
+.skill-mysql .animation {
+    width: 70%;
+}
+
+/* contact area */
+#contact-area {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/contact-area.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.input {
+    width: 100%;
+    border-radius: 50px;
+    background: none;
+    border: 1px solid #fff;
+    outline: none;
+    color: #fff;
+    font-family: var(--font-paragraph1);
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+}
+
+.input::placeholder {
+    color: #ddd;
+}
+
+textarea.input {
+    resize: none;
+}
+
+button.input {
+    background: var(--gradient1);
+    border: none;
+    font-family: var(--font-heading);
+}
